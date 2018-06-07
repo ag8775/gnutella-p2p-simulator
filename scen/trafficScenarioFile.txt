@@ -1,0 +1,14 @@
+0: 10 -INITIALIZE-;
+0: 0 -UP-;
+0: 1 -UP-;
+0: 2 -UP-;
+0: 3 -UP-;
+0: 4 -UP-;
+0: 5 -UP-;
+0: 6 -UP-;
+0: 7 -UP-;
+0: 8 -UP-;
+0: 9 -UP-;
+600: 0 -INITIATE_PARTIAL_QUERY- 2 {Celine, Dion} .mp3 (4);
+900: 2 -INITIATE_PARTIAL_QUERY- 1 {I} .mp3 (4);
+10000: 10 -STOP_SIMULATION-;

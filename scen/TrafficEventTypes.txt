@@ -1,0 +1,81 @@
+// Define constants for the different types of events scheduled by the
+  // traffic generator ...
+  /**
+   * DOWN a specified gnutella peer
+   * time: nodeId -DOWN-;
+   */
+  private final static int DOWN = 0;
+
+  /**
+   * UP a specified gnutella peer
+   * time: nodeId -UP-;
+   */
+  private final static int UP = 1;
+
+  /**
+   * Initialize ALL nodes ...
+   * time: numNodes -INITIALIZE-;
+   *
+   * numNodes is redundant here :-)
+   */
+  private final static int INITIALIZE = 2;
+
+  /**
+   * Initiate Full Query with TTL-limited flooding
+   * time: nodeId -INITIATE_FULL_QUERY- nWords {word1, word2, ..., wordn} fileType (TTL);
+   */
+  private final static int INITIATE_FULL_QUERY = 3;
+
+  /**
+   *  Initiate Partial Query with n words and TTL-limited flooding
+   * time: nodeId -INITIATE_PARTIAL_QUERY- nWords {word1, word2, ..., wordn} fileType (TTL);
+   */
+  private final static int INITIATE_PARTIAL_QUERY = 4;
+
+  /**
+   * Intiate Multiple Queries with a specified Query Rate ...
+   * time: nodeId -INITIATE_MULTIPLE_QUERIES- nParamaters {timeInterval, queryRate, distributionType, distributionParameters, ... } (TTL);
+   */
+  private final static int INITIATE_MULTIPLE_QUERIES = 5;
+
+  /**
+   * Reduce Node's Computational Capabilities
+   * time: nodeId -REDUCE_NODE_CAPACITY- nParams {cpu Ghz, memory MB, hdisk GB};
+   */
+  private final static int REDUCE_NODE_CAPACITY = 6;
+
+  /**
+   * Increase Node's Computational Capabilities
+   * time: nodeId -INCREASE_NODE_CAPACITY- nParams {cpu Ghz, memory MB, hdisk GB};
+   */
+  private final static int INCREASE_NODE_CAPACITY = 7;
+
+  /**
+   * Reduce Node's upstream/downstream bandwidth
+   * time: nodeId -REDUCE_NODE_BW- (upstream_bw Mbps, downstream_bw Mbps) nParams {distributionType, distributionParameters, ...};
+   */
+  private final static int REDUCE_NODE_BW = 8;
+
+  /**
+   * Increase Node's upstream/downstream bandwidth
+   * time: nodeId -INCREASE_NODE_BW- (upstream_bw Mbps, downstream_bw Mbps) nParams {distributionType, distributionParameters, ...};
+   */
+  private final static int INCREASE_NODE_BW = 9;
+
+  /**
+   * Drop some/all packets at some node for some time interval ...
+   * time: nodeId -DROP_PACKETS- timeInterval;
+   *          OR
+   * time: nodeId -DROP_PACKETS- timeInterval nParams {distributionType, distributionParameters, ...};
+   *
+   */
+  private final static int DROP_PACKETS = 10;
+  //          :
+  //          :
+  //          :
+
+  /**
+   * time: nodeNum -STOP_SIMULATION-;
+   *
+   * nodeNum is redundant here :-)
+   */
